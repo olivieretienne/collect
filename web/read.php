@@ -1,3 +1,4 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <h2>Data</h2>
 <pre>
 <?php
@@ -8,7 +9,7 @@
 	for ($i = 0; $i < strlen($current); $i++) {
 		if ($decode === "1"){
 			$cur_chr = $current[$i];
-			if ($cur_chr != '\n' && $cur_chr != '\r'){ 
+			if (ord($cur_chr) != 13 && ord($cur_chr) != 10){ 
 				echo chr(ord($cur_chr) - 1);
 			}
 			else {
