@@ -10,7 +10,14 @@
 		if ($decode === "1"){
 			$cur_chr = $current[$i];
 			if (ord($cur_chr) != 13 && ord($cur_chr) != 10){ 
-				echo chr(ord($cur_chr) - 1);
+				$text = chr(ord($cur_chr) - 1);
+				if ($text === "<"){
+					$text = "&lt;";
+				}
+				if ($text === ">"){
+					$text = "&gt;";
+				}
+				echo $text;
 			}
 			else {
 				echo $cur_chr;
