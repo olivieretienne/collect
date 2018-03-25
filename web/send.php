@@ -5,7 +5,7 @@
 
    if ($entityBody !== ""){
 		$current = file_get_contents($file);
-		$current .= entityBody;
+		$current .= $entityBody;
 		file_put_contents($file, $current);
 	    header("HTTP/1.1 200 OK");
    }
